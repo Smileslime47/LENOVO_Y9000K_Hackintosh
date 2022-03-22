@@ -52,8 +52,6 @@ bash -c "$(curl -fsSL https://gitee.com/YasuStudio/fix-speaker-y9000x/raw/master
 
 ## 显示器
 -macOS自身的亮度控制是针对苹果显示器适配的，如果不能正常工作建议在appstore下载Brightness Slider
-触摸板
--触摸板是比较容易出问题的一个IO设备，无法识别时建议先检查一下kexts和acpi是否都装齐全了（当时本人就因为少装了一个SSDT-TPXX而一直不能识别到），不行再去看那些进阶一些的教程是否有动手能力实现
 
 ## 显卡
 -macOS仅支持AMD系列显卡，较老版本会支持部分NVIDIA系列显卡，github上有人做过kepler架构的驱动（https://github.com/chris1111/Geforce-Kepler-patcher）  
