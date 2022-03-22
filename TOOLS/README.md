@@ -1,3 +1,6 @@
+ **本人repo所附工具均参照过协议兼容(主要为MIT协议)，如果你是这里某个工具的作者且认为构成了侵权，请联系我进行删除**  
+ **If you are the author of a tool here and think it constitutes infringement, please pm me to delete it**
+
 # 你可能会用到的工具：
 -拯救者系列一键修改BIOS：  
 https://github.com/xiaoMGitHub/LEGION_Y7000Series_Insyde_Advanced_Settings_Tools    
