@@ -1,3 +1,4 @@
+![董绘名](./banner.png)
 # LENOVO_Y9000K_Hackintosh
 OpenCore官方项目网址：https://github.com/acidanthera/OpenCorePkg  
 建议的几个前例参考网站：  
@@ -38,7 +39,7 @@ https://github.com/SukkaW/Lenovo-Y9000X-Hackintosh
 
 # 一些硬件上的建议
 ## 声卡
--编译最新版的1.7.1版本AppleALC并在NVRAM的boot-args设置**alcid=11**将可以检测到声卡，经测试3.5mm耳机接口直插可用，但扬声器无效，根据sukka的repo得知Y9k系列扬声器被连接到一个mac无法驱动的放大器上，解决方案在这里：  
+-编译最新版的1.7.1版本AppleALC并在NVRAM的boot-args设置**alcid=11**将可以检测到ALC287声卡(其他型号请自己查询)，经测试3.5mm耳机接口直插可用，但扬声器无效，根据sukka的repo得知Y9k系列扬声器被连接到一个mac无法驱动的放大器上，解决方案在这里：  
 https://gitee.com/YasuStudio/fix-speaker-y9000x  
 即直接在terminal输入  
 ```
@@ -48,7 +49,10 @@ bash -c "$(curl -fsSL https://gitee.com/YasuStudio/fix-speaker-y9000x/raw/master
 
 ## 网卡
 -y9000k2020用的网卡是cnvio协议的M.2双天线Intel AX201，电脑内预留的空间极小，博通有**BCM94360Z和BCM94352Z和dw系列**网卡可以兼容，但是千万不要买BCM94360CD之类的长款网卡，如果是其他型号的电脑强烈建议先拆开看看主板的预留空间是否足够。  
-用itlwm驱动intel网卡需要搭配附带的Heliport app，airportitlwm配合bluetoolfix可以驱动蓝牙和wifi，但蓝牙的被发现功能失效无法正常使用通用控制。
+用itlwm驱动intel网卡需要搭配附带的Heliport app，airportitlwm配合bluetoolfix可以驱动蓝牙和wifi，但蓝牙的被发现功能失效无法正常使用通用控制。  
+下图980上方左侧即为Y9000K主板的网卡空间  
+![主板预留空间](./y9000kmotherboard_1.jpg)
+![主板预留空间](./y9000kmotherboard_2.jpg)
 
 ## 显示器
 -macOS自身的亮度控制是针对苹果显示器适配的，如果不能正常工作建议在appstore下载Brightness Slider
@@ -72,10 +76,10 @@ bash -c "$(curl -fsSL https://gitee.com/YasuStudio/fix-speaker-y9000x/raw/master
 * SSDT-AWAC:修复时钟模块（RTC Clock）对MacOS的兼容
 * SSDT-EC：Embeded Controller，修复嵌入式控制器
 * SSDT-USBX：调整USB接口供电，同EC
-* SSDT-HPET:修复 IRQ 冲突。在新版SSDTTime中由SSDT-H[ET实现，老版本则为SSDT-IRQ）
+* SSDT-HPET:修复 IRQ 冲突。在新版SSDTTime中由SSDT-HPET实现，老版本则为SSDT-IRQ
 * SSDT-PLUG：CPU电源管理
 * SSDT-XCPM：CPU电源管理
-* SSDT-PNLFCFL:修复笔记本背光控制，用于intel coffeelake/cometlake系列cpu，其他架构建议用SSDT-PNLF
+* SSDT-PNLFCFL:修复笔记本背光控制，用于intel CoffeeLake/CometLake系列cpu，其他架构建议用SSDT-PNLF
 
 ### 睡眠ACPI：
 * SSDT-GPRW:修复macOS下睡眠自动唤醒的bug
