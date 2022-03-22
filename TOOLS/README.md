@@ -1,5 +1,5 @@
 # 你可能会用到的工具：
--拯救者系列一键修改BIOS：
+-拯救者系列一键修改BIOS：  
 https://github.com/xiaoMGitHub/LEGION_Y7000Series_Insyde_Advanced_Settings_Tools    
 用于修改那些拯救者系列bios中没有列出的关键选项，如CFGLock等 
 
