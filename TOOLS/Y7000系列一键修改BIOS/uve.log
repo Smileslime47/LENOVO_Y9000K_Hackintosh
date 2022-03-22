@@ -1,0 +1,13 @@
+Command is: -gv
+Initialize driver
+Search SMI command and function number
+Start command process...
+Export EFI Variables to TXT file
+Now parsing Variable Information.
+Init BIOS runtime variable object from IHISI.
+Release BIOS data information
+Release BIOS variable object.
+Complete parsing Variable Information!!!
+Saving Variable Information to file: SetGPIO_Original.txt
+Command process done.
+Release driver
